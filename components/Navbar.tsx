@@ -2,18 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { Menu, X, Github, Rocket } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const APPLY_URL = 'https://forms.gle/uReie9GcAUeYbzsY8'
 
 const navLinks = [
   { href: '#about', label: 'About' },
-  { href: '#program', label: 'Program' },
-  { href: '#apply', label: 'Apply Cohort 02' },
   { href: '#cohort', label: 'Cohort C01' },
   { href: '#mentors', label: 'Mentors' },
   { href: '#gallery', label: 'Gallery' },
-  { href: '#camp', label: 'BioCamp' },
+  { href: '/onboarding', label: 'Onboarding' },
 ]
 
 export default function Navbar() {
@@ -34,15 +32,9 @@ export default function Navbar() {
     >
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group" aria-label="GSA Bioinformatics Internship">
-          <div className="relative w-10 h-10 flex-shrink-0">
-            <Image
-              src="/logos/GSABioinformaticsInternship.png"
-              alt="GSA"
-              fill
-              className="object-contain"
-              unoptimized
-            />
+        <a href="/" className="flex items-center gap-3" aria-label="GSA Bioinformatics Internship">
+          <div className="relative w-9 h-9 flex-shrink-0">
+            <Image src="/logos/GSABioinformaticsInternship.png" alt="GSA" fill className="object-contain" unoptimized />
           </div>
           <div className="leading-none">
             <div className="text-white font-semibold text-sm tracking-tight">GSA Bioinformatics</div>
@@ -50,7 +42,7 @@ export default function Navbar() {
           </div>
         </a>
 
-        {/* Desktop navigation */}
+        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="nav-link">
@@ -59,7 +51,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Right: Apply + GitHub + mobile toggle */}
+        {/* Apply CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <a
             href={APPLY_URL}
@@ -71,17 +63,7 @@ export default function Navbar() {
               boxShadow: '0 0 16px rgba(6,182,212,0.3)',
             }}
           >
-            <Rocket size={14} />
             Apply C02
-          </a>
-          <a
-            href="https://github.com/gsabioinfointernship"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium btn-outline"
-          >
-            <Github size={15} />
-            GitHub
           </a>
           <button
             className="md:hidden p-2 text-slate-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
@@ -96,7 +78,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          mobileOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <nav className="glass border-t border-cyan-500/10 px-6 py-4 flex flex-col gap-1">
@@ -114,20 +96,10 @@ export default function Navbar() {
             href={APPLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 flex items-center gap-2 justify-center px-4 py-3 rounded-lg text-sm font-bold text-white"
+            className="mt-2 flex items-center justify-center px-4 py-3 rounded-lg text-sm font-bold text-white"
             style={{ background: 'linear-gradient(90deg, #059669, #06b6d4)' }}
           >
-            <Rocket size={15} />
             Apply for Cohort 02
-          </a>
-          <a
-            href="https://github.com/gsabioinfointernship"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-1 flex items-center gap-2 btn-outline justify-center"
-          >
-            <Github size={15} />
-            GitHub
           </a>
         </nav>
       </div>

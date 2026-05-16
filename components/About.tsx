@@ -103,30 +103,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Mission statement highlight */}
-        <div className="reveal mb-16">
-          <div
-            className="relative rounded-2xl p-8 md:p-10 overflow-hidden"
-            style={{
-              background:
-                'linear-gradient(135deg, rgba(6,182,212,0.07) 0%, rgba(16,185,129,0.05) 50%, rgba(139,92,246,0.07) 100%)',
-              border: '1px solid rgba(6,182,212,0.15)',
-            }}
-          >
-            <div
-              className="absolute top-0 left-0 w-1 h-full rounded-l-2xl"
-              style={{ background: 'linear-gradient(180deg, #06b6d4, #10b981, #8b5cf6)' }}
-            />
-            <p className="text-slate-200 text-lg md:text-xl leading-relaxed pl-4 md:pl-6 italic">
-              &ldquo;Our mission is to bridge the gap between theoretical education and real-world research
-              in life sciences by integrating bioinformatics, data science, and molecular biology.
-              We bring together academic researchers, educators, and practitioners from leading
-              institutions to design a learning environment that emphasizes hands-on experience,
-              mentorship, and scientific integrity.&rdquo;
-            </p>
-          </div>
-        </div>
-
         {/* Pillars grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {pillars.map((pillar, i) => {

@@ -1,8 +1,8 @@
-import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Organizations from '@/components/Organizations'
 import ProgramHighlights from '@/components/ProgramHighlights'
+import Labs from '@/components/Labs'
 import Apply from '@/components/Apply'
 import Cohort from '@/components/Cohort'
 import Mentors from '@/components/Mentors'
@@ -13,11 +13,11 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Navbar />
       <Hero />
       <About />
       <Organizations />
       <ProgramHighlights />
+      <Labs />
       <Apply />
       <Cohort />
       <Mentors />

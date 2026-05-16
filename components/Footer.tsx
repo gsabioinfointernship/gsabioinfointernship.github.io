@@ -5,7 +5,7 @@ const links = {
   Program: [
     { label: 'About', href: '#about' },
     { label: 'Curriculum', href: '#program' },
-    { label: '🚀 Apply — Cohort 02', href: 'https://forms.gle/uReie9GcAUeYbzsY8', external: true },
+    { label: 'Apply — Cohort 02', href: 'https://forms.gle/uReie9GcAUeYbzsY8', external: true },
     { label: 'Cohort C01', href: '#cohort' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'Bio Camp', href: '#camp' },
@@ -14,23 +14,18 @@ const links = {
     { label: 'GNOBB', href: 'https://gnobb.org', external: true },
     { label: 'SPSB', href: '#', external: false },
     { label: 'ASI School of Life', href: '#', external: false },
-    { label: 'CHIRAL Bangladesh', href: 'https://mdjubayerhossain.com', external: true },
-    { label: 'DeepBio Limited', href: '#', external: false },
+    { label: 'CHIRAL Bangladesh', href: '#', external: true },
+    { label: 'DeepBio Limited', href: 'https://deepbioltd.com/', external: false },
+    { label: 'DeepBio Academy', href: 'https://deepbioacademy.com/', external: false }
+
   ],
   Resources: [
+    { label: 'Onboarding Guide', href: '/onboarding', external: false },
     { label: 'GitHub Organization', href: 'https://github.com/gsabioinfointernship', external: true },
     { label: 'Cohort C01 Projects', href: '#cohort', external: false },
     { label: 'Photo Gallery', href: '#gallery', external: false },
   ],
 }
-
-const logos = [
-  { src: '/logos/GNOBB.png', alt: 'GNOBB' },
-  { src: '/logos/SPSB.png', alt: 'SPSB' },
-  { src: '/logos/ASISchoolofLife.png', alt: 'ASI' },
-  { src: '/logos/chiral_logo.jpg', alt: 'CHIRAL' },
-  { src: '/logos/DeepBioLogo.png', alt: 'DeepBio' },
-]
 
 export default function Footer() {
   return (
@@ -96,23 +91,6 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
-
-        <div className="divider mb-8" />
-
-        {/* Logo strip */}
-        <div className="flex flex-wrap items-center justify-center gap-8 mb-10">
-          {logos.map((logo) => (
-            <Image
-              key={logo.alt}
-              src={logo.src}
-              alt={logo.alt}
-              width={48}
-              height={48}
-              className="object-contain opacity-40 hover:opacity-70 transition-opacity"
-              unoptimized
-            />
           ))}
         </div>
 

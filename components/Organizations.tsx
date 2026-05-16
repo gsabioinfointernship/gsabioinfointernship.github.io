@@ -112,10 +112,10 @@ export default function Organizations() {
               <div key={org.abbr} className="reveal card p-6 flex flex-col h-full" style={{ transitionDelay: `${i * 100}ms` }}>
                 <div className="flex items-start gap-4 mb-4">
                   <div
-                    className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center"
+                    className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center"
                     style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
                   >
-                    <Image src={org.logo} alt={org.abbr} width={56} height={56} className="object-contain" unoptimized />
+                    <Image src={org.logo} alt={org.abbr} width={48} height={48} className="object-contain" unoptimized />
                   </div>
                   <div>
                     <div
@@ -124,7 +124,7 @@ export default function Organizations() {
                     >
                       {org.role}
                     </div>
-                    <h3 className="text-white font-semibold text-base leading-snug">{org.name}</h3>
+                    <h3 className="text-white font-semibold text-sm leading-snug">{org.name}</h3>
                   </div>
                 </div>
                 <p className="text-slate-400 text-sm leading-relaxed flex-1">{org.desc}</p>
@@ -145,10 +145,10 @@ export default function Organizations() {
               <div key={org.abbr} className="reveal card p-6 flex flex-col h-full" style={{ transitionDelay: `${i * 120}ms` }}>
                 <div className="flex items-start gap-4 mb-4">
                   <div
-                    className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center"
+                    className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center"
                     style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
                   >
-                    <Image src={org.logo} alt={org.abbr} width={56} height={56} className="object-contain" unoptimized />
+                    <Image src={org.logo} alt={org.abbr} width={48} height={48} className="object-contain" unoptimized />
                   </div>
                   <div>
                     <div
@@ -157,37 +157,10 @@ export default function Organizations() {
                     >
                       {org.role}
                     </div>
-                    <h3 className="text-white font-semibold text-base leading-snug">{org.name}</h3>
+                    <h3 className="text-white font-semibold text-sm leading-snug">{org.name}</h3>
                   </div>
                 </div>
                 <p className="text-slate-400 text-sm leading-relaxed flex-1">{org.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Logo strip */}
-        <div className="reveal mt-14">
-          <div
-            className="flex flex-wrap items-center justify-center gap-10 py-8 px-10 rounded-2xl"
-            style={{
-              background: 'rgba(255,255,255,0.02)',
-              border: '1px solid rgba(255,255,255,0.05)',
-            }}
-          >
-            {[...hosts, ...partners].map((org) => (
-              <div key={org.abbr} className="flex flex-col items-center gap-2 group">
-                <Image
-                  src={org.logo}
-                  alt={org.abbr}
-                  width={64}
-                  height={64}
-                  className="object-contain opacity-70 group-hover:opacity-100 transition-opacity logo-img"
-                  unoptimized
-                />
-                <span className="text-slate-600 text-xs font-mono group-hover:text-slate-400 transition-colors">
-                  {org.abbr}
-                </span>
               </div>
             ))}
           </div>
