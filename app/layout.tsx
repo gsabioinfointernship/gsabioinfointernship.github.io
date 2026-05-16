@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
+import { Inter, Space_Grotesk } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import './globals.css'
 
@@ -15,42 +15,40 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 })
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
-  display: 'swap',
-  weight: ['400', '500'],
-})
-
 export const metadata: Metadata = {
-  title: 'GSA Bioinformatics Internship | GNOBB · SPSB · ASI',
+  metadataBase: new URL('https://gsabioinfointernship.github.io'),
+  title: {
+    default: 'GSA Bioinformatics Internship Program | Apply for Cohort 02',
+    template: '%s | GSA Bioinformatics Internship',
+  },
   description:
-    'A 6-month hybrid bioinformatics internship by GNOBB, ASI School of Life, and SPSB — nurturing the next generation of bioinformatics researchers in Bangladesh through hands-on training, mentorship, and collaborative research.',
+    'Apply now for GSA Cohort 02 — a 6-month hybrid bioinformatics internship in Bangladesh by GNOBB, ASI School of Life, and SPSB. Hands-on training, expert mentorship, and publication-ready research.',
   keywords: [
-    'bioinformatics',
-    'internship',
-    'Bangladesh',
-    'GNOBB',
-    'SPSB',
-    'ASI',
+    'bioinformatics internship Bangladesh',
+    'GSA bioinformatics',
+    'GNOBB internship',
+    'computational biology training',
+    'bioinformatics cohort 2025',
+    'CHIRAL Bangladesh',
     'DeepBio',
-    'CHIRAL',
-    'computational biology',
-    'life sciences',
-    'research',
+    'life sciences research Bangladesh',
+    'genomics internship',
+    'transcriptomics training',
   ],
   authors: [{ name: 'GSA Bioinformatics Internship Team' }],
   openGraph: {
-    title: 'GSA Bioinformatics Internship',
+    title: 'GSA Bioinformatics Internship — Apply for Cohort 02',
     description:
-      'Bridging theoretical education and real-world research in life sciences through bioinformatics, data science, and molecular biology.',
+      'A 6-month hybrid bioinformatics internship in Bangladesh. Hands-on research, expert mentorship from CHIRAL Bangladesh & DeepBio, and publication-ready projects. Applications open now.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://gsabioinfointernship.github.io',
+    siteName: 'GSA Bioinformatics Internship',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GSA Bioinformatics Internship',
-    description: 'A collaborative bioinformatics internship program — GNOBB · SPSB · ASI',
+    title: 'GSA Bioinformatics Internship — Apply for Cohort 02',
+    description: '6-month hybrid bioinformatics internship in Bangladesh. Applications open now — GNOBB · SPSB · ASI',
   },
 }
 
@@ -58,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable}`}
     >
       <body className={`${inter.className} antialiased`}>
         <Navbar />

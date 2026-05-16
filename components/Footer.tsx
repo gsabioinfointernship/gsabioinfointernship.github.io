@@ -103,7 +103,16 @@ export default function Footer() {
             All rights reserved.
           </p>
           <p className="text-slate-600 text-xs flex items-center gap-1.5">
-            Built with <Heart size={11} className="text-cyan-600" /> for bioinformatics education in Bangladesh
+            Developed by{' '}
+            <a
+              href="https://mdjubayerhossain.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-700 hover:text-cyan-500 transition-colors"
+            >
+              Md. Jubayer Hossain
+            </a>
+            <Heart size={11} className="text-cyan-700" />
           </p>
         </div>
       </div>
