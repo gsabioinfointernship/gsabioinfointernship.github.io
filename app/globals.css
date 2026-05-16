@@ -1,0 +1,361 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f8fafc;
+    overflow-x: hidden;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  ::selection {
+    background-color: rgba(6, 182, 212, 0.3);
+    color: #f8fafc;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060d1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #06b6d4;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Glass morphism */
+  .glass {
+    background: rgba(15, 30, 58, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(6, 182, 212, 0.1);
+  }
+
+  .glass-dark {
+    background: rgba(6, 13, 26, 0.8);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(6, 182, 212, 0.08);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #06b6d4 0%, #10b981 55%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-cyan {
+    background: linear-gradient(90deg, #22d3ee, #6ee7b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section label badge */
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    color: #22d3ee;
+    text-transform: uppercase;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: white;
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(6, 182, 212, 0.45);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: #22d3ee;
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-outline:hover {
+    background: rgba(6, 182, 212, 0.18);
+    border-color: rgba(6, 182, 212, 0.6);
+    transform: translateY(-2px);
+  }
+
+  /* Container */
+  .container-wide {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-wide {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-wide {
+      padding: 0 3rem;
+    }
+  }
+
+  /* Grid pattern background */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(rgba(6, 182, 212, 0.13) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Card styles */
+  .card {
+    background: rgba(15, 30, 58, 0.6);
+    border: 1px solid rgba(6, 182, 212, 0.1);
+    border-radius: 1.25rem;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card:hover {
+    border-color: rgba(6, 182, 212, 0.3);
+    background: rgba(22, 45, 90, 0.75);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(6, 182, 212, 0.1);
+  }
+
+  /* Nav link underline */
+  .nav-link {
+    position: relative;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: #22d3ee;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #06b6d4, #10b981);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Glow effects */
+  .glow-cyan {
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.25);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.25);
+  }
+
+  /* Gallery item */
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 0.875rem;
+    border: 1px solid rgba(6, 182, 212, 0.08);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .gallery-item:hover {
+    border-color: rgba(6, 182, 212, 0.35);
+    box-shadow: 0 16px 50px rgba(6, 182, 212, 0.15);
+    transform: scale(1.02);
+  }
+
+  .gallery-item img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.06);
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+}
+
+/* Animated gradient background */
+.animated-bg {
+  background: linear-gradient(-45deg, #030712, #071428, #03100a, #0d0728, #030712);
+  background-size: 400% 400%;
+  animation: gradient-shift 18s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Gallery fade-in (used via inline style animation name) ── */
+@keyframes galleryFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Apply banner shimmer ── */
+@keyframes shimmerBanner {
+  from { background-position: -200% 0; }
+  to   { background-position:  200% 0; }
+}
+
+/* ── Hero CSS orbs (replaces canvas) ── */
+@keyframes orb1 {
+  0%,100% { transform: translate(0,0) scale(1); opacity:0.35; }
+  33%      { transform: translate(60px,-40px) scale(1.15); opacity:0.55; }
+  66%      { transform: translate(-40px,30px) scale(0.9); opacity:0.4; }
+}
+@keyframes orb2 {
+  0%,100% { transform: translate(0,0) scale(1); opacity:0.25; }
+  50%      { transform: translate(-80px,-60px) scale(1.2); opacity:0.5; }
+}
+@keyframes orb3 {
+  0%,100% { transform: translate(0,0); opacity:0.4; }
+  40%      { transform: translate(50px,60px); opacity:0.65; }
+  80%      { transform: translate(-30px,-20px); opacity:0.35; }
+}
+
+.hero-orb-1 { animation: orb1 12s ease-in-out infinite; }
+.hero-orb-2 { animation: orb2 16s ease-in-out infinite; }
+.hero-orb-3 { animation: orb3 10s ease-in-out 2s infinite; }
+
+/* ── Shimmer banner class ── */
+.shimmer-banner {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmerBanner 3s linear infinite;
+}
+
+/* Logo images — auto-invert on dark backgrounds */
+.logo-img {
+  filter: drop-shadow(0 2px 8px rgba(6, 182, 212, 0.15));
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.logo-img:hover {
+  filter: drop-shadow(0 4px 16px rgba(6, 182, 212, 0.4));
+  transform: scale(1.05);
+}
+
+/* Divider line */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.3), transparent);
+}
+
+/* Tag badges on cards */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tag-cyan {
+  background: rgba(6, 182, 212, 0.12);
+  color: #67e8f9;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.tag-green {
+  background: rgba(16, 185, 129, 0.12);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.tag-purple {
+  background: rgba(139, 92, 246, 0.12);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
