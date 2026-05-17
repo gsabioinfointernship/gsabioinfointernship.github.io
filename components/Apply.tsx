@@ -226,57 +226,7 @@ export default function Apply() {
           </div>
         </div>
 
-        {/* ── 5. Program fee ── */}
-        <div style={anim('0.25s')}>
-          <p className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-5 text-center">Program Fee</p>
-          <div
-            className="rounded-2xl p-7 md:p-8"
-            style={{
-              background: 'linear-gradient(135deg, rgba(6,182,212,0.05) 0%, rgba(139,92,246,0.05) 100%)',
-              border: '1px solid rgba(6,182,212,0.15)',
-            }}
-          >
-            <div className="flex flex-col md:flex-row md:items-center gap-8">
-              <div className="flex-shrink-0 text-center md:text-left">
-                <div className="text-slate-500 text-xs font-mono uppercase tracking-widest mb-1">Monthly</div>
-                <div className="font-display font-bold text-5xl gradient-text-cyan leading-none">৳2,040</div>
-                <div className="text-slate-400 text-sm mt-1">per month · 6 months total</div>
-              </div>
-
-              <div className="hidden md:block w-px self-stretch bg-white/5" />
-
-              <div className="flex-1 grid sm:grid-cols-2 gap-4">
-                <div className="rounded-xl p-4" style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.18)' }}>
-                  <div className="text-emerald-400 text-xs font-bold uppercase tracking-wide mb-3">Program Covers</div>
-                  <ul className="space-y-2">
-                    {['Instructor & trainer fees', 'Staff & coordination costs', 'Curriculum & learning materials'].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-slate-300 text-sm">
-                        <CheckCircle2 size={12} className="text-emerald-400 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="rounded-xl p-4" style={{ background: 'rgba(6,182,212,0.08)', border: '1px solid rgba(6,182,212,0.18)' }}>
-                  <div className="text-cyan-400 text-xs font-bold uppercase tracking-wide mb-3">Your Fee Covers</div>
-                  <ul className="space-y-2">
-                    {['Friday & Saturday snacks', 'Printing, stationery & materials', 'Shared operational expenses'].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-slate-300 text-sm">
-                        <CheckCircle2 size={12} className="text-cyan-400 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <p className="text-slate-500 text-xs mt-6 pt-5 border-t border-white/5">
-              Instructor and staff costs are fully funded by the organizing institutions. The monthly fee sustains the in-person experience only.
-            </p>
-          </div>
-        </div>
-
-        {/* ── 6. CTA ── */}
+        {/* ── 5. CTA ── */}
         <div className="text-center" style={anim('0.3s')}>
           <div
             className="inline-flex flex-col sm:flex-row items-center gap-4 px-8 py-6 rounded-2xl"
