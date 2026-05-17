@@ -21,15 +21,21 @@ const benefits = [
 ]
 
 const eligibility = [
+  // Who
   'Undergraduate or graduate students in biology, biochemistry, bioinformatics, or related fields',
+  'Open to students from any institution in Bangladesh — must be able to attend in-person sessions every Friday and Saturday in Dhaka',
+  // Attitude & mindset
   'Strong motivation to learn computational biology and data-driven research',
-  'Basic familiarity with any programming language, or willingness to learn',
-  'Commitment to complete the full 6-month hybrid program',
-  'Ability to attend in-person sessions every Friday and Saturday in Dhaka',
+  'Highly team-oriented and dedicated, with a problem-solving mindset and passion for data-driven biological research',
+  // Skills
+  'Basic familiarity with Bash, R, or Python, or willingness to learn',
   'Access to a personal laptop for online and remote components',
-  'Ability to work both independently and collaboratively in a team',
+  // Time & commitment
+  'Can commit 15–20 hours/week to lab or computational work (evenings and weekends preferred; flexible during exams)',
+  'Commitment to complete the full 6-month hybrid program',
   'Willingness to present research progress and participate in weekly meetings',
-  'Open to students from any institution in Bangladesh',
+  // Constraints
+  'Must not be engaged with any other organization during the internship — academic thesis work is the only exception',
 ]
 
 const steps = [

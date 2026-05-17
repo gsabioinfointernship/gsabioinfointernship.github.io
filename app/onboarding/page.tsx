@@ -25,6 +25,8 @@ const sections = [
           'Oral presentations must first be presented to the team for feedback.',
           'Authorship follows ICMJE standards. Plagiarism is not tolerated.',
           'Maintain a safe, respectful, and harassment-free environment.',
+          'Maintain strict compliance with national and international ethical and copyright standards in all research activities.',
+          'Interns must not be engaged with any other organization during the internship — academic thesis work is the only permitted exception.',
         ],
       },
       {
@@ -41,6 +43,7 @@ const sections = [
           'Weekly scrum kick-off — every Friday at 8:30 AM.',
           'Demo day — every Saturday at 8:30 AM (3-minute accomplishment update).',
           'Research meetings — third Friday of each month (rotating meeting lead).',
+          'Weekly group meeting — every Sunday night, 9:00–11:00 PM, via Zoom/Google Meet/Teams (mandatory).',
         ],
       },
     ],
