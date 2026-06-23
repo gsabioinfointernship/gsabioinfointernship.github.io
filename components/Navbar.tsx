@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
-const APPLY_URL = 'https://forms.gle/uReie9GcAUeYbzsY8'
-
 const navLinks = [
   { href: '#about', label: 'About' },
+  { href: '#cohort-c02', label: 'Cohort C02' },
   { href: '#cohort', label: 'Cohort C01' },
   { href: '#mentors', label: 'Mentors' },
   { href: '#gallery', label: 'Gallery' },
@@ -54,16 +53,14 @@ export default function Navbar() {
         {/* Apply CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <a
-            href={APPLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#cohort-c02"
             className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-bold text-white transition-all hover:scale-105"
             style={{
               background: 'linear-gradient(90deg, #059669, #06b6d4)',
               boxShadow: '0 0 16px rgba(6,182,212,0.3)',
             }}
           >
-            Apply C02
+            Meet Cohort 02
           </a>
           <button
             className="md:hidden p-2 text-slate-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
@@ -93,13 +90,12 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={APPLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#cohort-c02"
+            onClick={() => setMobileOpen(false)}
             className="mt-2 flex items-center justify-center px-4 py-3 rounded-lg text-sm font-bold text-white"
             style={{ background: 'linear-gradient(90deg, #059669, #06b6d4)' }}
           >
-            Apply for Cohort 02
+            Meet Cohort 02
           </a>
         </nav>
       </div>

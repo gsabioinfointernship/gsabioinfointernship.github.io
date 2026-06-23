@@ -5,7 +5,7 @@ const links = {
   Program: [
     { label: 'About', href: '#about' },
     { label: 'Curriculum', href: '#program' },
-    { label: 'Apply — Cohort 02', href: 'https://forms.gle/uReie9GcAUeYbzsY8', external: true },
+    { label: 'Cohort C02', href: '#cohort-c02' },
     { label: 'Cohort C01', href: '#cohort' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'Bio Camp', href: '#camp' },

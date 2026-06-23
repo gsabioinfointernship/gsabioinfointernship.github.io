@@ -84,13 +84,13 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-3 mb-10">
-              <a href="#cohort" className="btn-primary">
+              <a href="#cohort-c02" className="btn-primary">
                 <Microscope size={16} />
-                Meet Cohort C01
+                Meet Cohort C02
               </a>
-              <a href="#apply" className="btn-outline">
+              <a href="#cohort" className="btn-outline">
                 <Network size={16} />
-                Apply for C02
+                Cohort C01
               </a>
             </div>
 

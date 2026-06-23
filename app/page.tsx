@@ -4,6 +4,7 @@ import Organizations from '@/components/Organizations'
 import ProgramHighlights from '@/components/ProgramHighlights'
 import Labs from '@/components/Labs'
 import Apply from '@/components/Apply'
+import Cohort02 from '@/components/Cohort02'
 import Cohort from '@/components/Cohort'
 import Mentors from '@/components/Mentors'
 import Gallery from '@/components/Gallery'
@@ -19,6 +20,7 @@ export default function Home() {
       <ProgramHighlights />
       <Labs />
       <Apply />
+      <Cohort02 />
       <Cohort />
       <Mentors />
       <Gallery />

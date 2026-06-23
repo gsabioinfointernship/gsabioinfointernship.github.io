@@ -11,8 +11,6 @@ import {
   MapPin,
 } from 'lucide-react'
 
-const APPLY_URL = 'https://forms.gle/uReie9GcAUeYbzsY8'
-
 const benefits = [
   { icon: GraduationCap, label: 'Structured Curriculum', desc: 'Foundation to advanced bioinformatics over 6 months', color: '#06b6d4' },
   { icon: Users, label: 'Expert Mentorship', desc: 'Guided by CHIRAL Bangladesh, DeepBio & DeepBio Academy', color: '#10b981' },
@@ -92,14 +90,14 @@ export default function Apply() {
         {/* ── 1. Header ── */}
         <div className="text-center" style={anim('0s')}>
           <div className="section-badge mb-5">
-            <Rocket size={13} />
-            GSA Cohort 02 — Applications Open
+            <Clock size={13} />
+            GSA Cohort 02 — Applications Closed
           </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-4 leading-tight">
-            Apply for <span className="gradient-text">GSA Cohort 02</span>
+            <span className="gradient-text">Cohort 02</span> Applications Are Closed
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto">
-            6 months of hands-on bioinformatics research, expert mentorship, and real-world projects — based in Dhaka.
+            Thank you to everyone who applied. Cohort 02 is now selected and underway. Follow us to hear when applications for the next cohort open.
           </p>
         </div>
 
@@ -237,21 +235,19 @@ export default function Apply() {
           <div
             className="inline-flex flex-col sm:flex-row items-center gap-4 px-8 py-6 rounded-2xl"
             style={{
-              background: 'linear-gradient(135deg, rgba(5,150,105,0.15) 0%, rgba(6,182,212,0.15) 100%)',
-              border: '1px solid rgba(6,182,212,0.25)',
+              background: 'rgba(255,255,255,0.03)',
+              border: '1px solid rgba(255,255,255,0.08)',
             }}
           >
             <div className="text-left">
               <div className="flex items-center gap-2 mb-1">
-                <Clock size={14} color="#22d3ee" />
-                <span className="text-cyan-300 text-sm font-semibold">Applications are open now</span>
+                <Clock size={14} color="#94a3b8" />
+                <span className="text-slate-300 text-sm font-semibold">Applications for Cohort 02 are now closed</span>
               </div>
-              <p className="text-slate-400 text-sm">Free to apply · No application fee</p>
+              <p className="text-slate-400 text-sm">The selected interns are featured below.</p>
             </div>
             <a
-              href={APPLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#cohort-c02"
               className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-base text-white transition-all hover:scale-105"
               style={{
                 background: 'linear-gradient(135deg, #059669 0%, #06b6d4 100%)',
@@ -259,7 +255,7 @@ export default function Apply() {
               }}
             >
               <ExternalLink size={16} />
-              Apply Now
+              Meet Cohort 02
             </a>
           </div>
         </div>

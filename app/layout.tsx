@@ -18,11 +18,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://gsabioinfointernship.github.io'),
   title: {
-    default: 'GSA Bioinformatics Internship Program | Apply for Cohort 02',
+    default: 'GSA Bioinformatics Internship — Training the Next Generation of Computational Biologists in Bangladesh',
     template: '%s | GSA Bioinformatics Internship',
   },
   description:
-    'Apply now for GSA Cohort 02 — a 6-month hybrid bioinformatics internship in Bangladesh by GNOBB, ASI School of Life, and SPSB. Hands-on training, expert mentorship, and publication-ready research.',
+    'GSA Bioinformatics Internship — a 6-month hybrid program in Bangladesh by GNOBB, ASI School of Life, and SPSB. Meet our Cohort 02 interns. Hands-on training, expert mentorship, and publication-ready research.',
   keywords: [
     'bioinformatics internship Bangladesh',
     'GSA bioinformatics',
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'GSA Bioinformatics Internship Team' }],
   openGraph: {
-    title: 'GSA Bioinformatics Internship — Apply for Cohort 02',
+    title: 'GSA Bioinformatics Internship — Cohort 02',
     description:
-      'A 6-month hybrid bioinformatics internship in Bangladesh. Hands-on research, expert mentorship from CHIRAL Bangladesh & DeepBio, and publication-ready projects. Applications open now.',
+      'A 6-month hybrid bioinformatics internship in Bangladesh. Hands-on research, expert mentorship from CHIRAL Bangladesh & DeepBio, and publication-ready projects. Meet our Cohort 02 interns.',
     type: 'website',
     locale: 'en_US',
     url: 'https://gsabioinfointernship.github.io',
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GSA Bioinformatics Internship — Apply for Cohort 02',
-    description: '6-month hybrid bioinformatics internship in Bangladesh. Applications open now — GNOBB · SPSB · ASI',
+    title: 'GSA Bioinformatics Internship — Cohort 02',
+    description: '6-month hybrid bioinformatics internship in Bangladesh. Meet our Cohort 02 interns — GNOBB · SPSB · ASI',
   },
 }
 

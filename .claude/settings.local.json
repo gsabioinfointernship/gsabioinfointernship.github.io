@@ -7,7 +7,9 @@
       "Bash(grep:*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(python -c ' *)",
+      "Bash(tasklist)"
     ]
   }
 }

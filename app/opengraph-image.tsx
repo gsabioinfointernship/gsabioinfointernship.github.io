@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const dynamic = 'force-static'
-export const alt = 'GSA Bioinformatics Internship — Apply for Cohort 02'
+export const alt = 'GSA Bioinformatics Internship — Cohort 02'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -151,7 +151,7 @@ export default function OGImage() {
               display: 'flex',
             }}
           >
-            Apply Now — Free
+            Cohort 02 — Now Underway
           </div>
           <span style={{ color: '#475569', fontSize: 16, display: 'flex' }}>
             gsabioinfointernship.github.io
